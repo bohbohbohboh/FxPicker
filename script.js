@@ -6,15 +6,177 @@ const categories = {
   genderNarrator: ["female", "male", "female", "male", "androgynous", "futa", "MTF", "FTM"],
   orientationNarrator: ["100% heterosexual", "mostly heterosexual", "bisexual", "homosexual", "fluid orientation"],
   clothingNarrator: [
-    "naked", "painted body (only)", "body covered in mud/oil", "primal rags", "rope only",
-  "home wear", "pajamas or sleepwear", "bathrobe and slippers", "loose tank top and shorts", "oversized sweater", "transparent lounge robe",
-  "work uniform", "office attire", "lab coat with nothing underneath", "police/military uniform", "maid outfit", "prison jumpsuit",
-  "latex catsuit", "leather harness", "corset and heels", "open-cup lingerie", "gag and cuffs set", "puppy/bunny play gear",
-  "anime-style school uniform", "magical girl outfit", "demon queen regalia", "elf huntress armor", "cyberpunk street gear", "alien priestess robes",
-  "elegant evening gown", "ball dress with slit", "see-through silk dress", "tuxedo (gender-inverted)", "high heels and pearls only", "corset with opera gloves",
-  "gender-bending outfit", "feminine outfit on masculine body", "masculine suit on feminine body", "hybridized gender costume", "crossplay armor",
-  "cult robes", "sacred veils and body paint", "ceremonial chains", "priestess attire", "nude with symbolic tattoos"
+  // Nudità e minimalismo
+  "nothing (naked)",
+  "nothing but bodypaint",
+  "nothing but mud or oil",
+  "primal rags",
+  "nothing but rope",
+  "nothing but glowing body paint",
+  "nothing but a veil and chains",
+  "nothing but a transparent body net",
+  "nothing but thigh-high boots and a collar",
+  "a full-body leash harness",
+  "a backless halter with piercings",
+  "nothing but cuffs",
+  "a chastity belt only",
+  "a ceremonial cloak over bare skin",
+
+  // Casual / intimo
+  "home wear",
+  "pajamas or sleepwear",
+  "a bathrobe and slippers",
+  "a loose tank top and shorts",
+  "an oversized sweater",
+  "a transparent lounge robe",
+
+  // Professionale
+  "a work uniform",
+  "office attire",
+  "a lab coat with nothing underneath",
+  "a police or military uniform",
+  "a maid outfit",
+  "a prison jumpsuit",
+
+  // Fetish / bondage
+  "a latex catsuit",
+  "a leather harness",
+  "a corset and heels",
+  "open-cup lingerie",
+  "a gag and cuffs set",
+  "puppy or bunny play gear",
+  "a vacuum-sealed latex wrap",
+  "a transparent PVC dress",
+  "a spine corset with metal rings",
+  "an anal plug with decorative tail",
+  "nipple clamps and a holy robe",
+  "bondage ballet boots and a yoke",
+  "a sensory-deprivation hood with jewels",
+  "a dog mask with a posture collar",
+  "a chastity belt and a public tag",
+
+  // Cosplay / fantasy
+  "an anime-style school uniform",
+  "a magical girl outfit",
+  "a demon queen regalia",
+  "an elf huntress armor",
+  "cyberpunk street gear",
+  "alien priestess robes",
+  "a ballerina costume with exposed skin",
+  "a living doll dress with locks",
+  "a waxed statue attire",
+  "an android service unit uniform",
+  "an experimental school uniform",
+  "a lab subject number bodysuit",
+
+  // Elegante / seducente
+  "an elegant evening gown",
+  "a ball dress with slit",
+  "a see-through silk dress",
+  "a tuxedo (gender-inverted)",
+  "nothing but high heels and pearls",
+  "a corset with opera gloves",
+
+  // Gender bend / ibrido
+  "a gender-bending outfit",
+  "a feminine outfit on a masculine body",
+  "a masculine suit on a feminine body",
+  "a hybridized gender costume",
+  "crossplay armor",
+
+  // Simbolico / spirituale / cultuale
+  "cult robes",
+  "sacred veils and body paint",
+  "ceremonial chains",
+  "priestess attire",
+  "nothing but symbolic tattoos",
+  "a gilded ritual mask and gloves",
+  "a blindfold and a blood-marked robe",
+  "initiation sashes and brands",
+  "glowing tattoos and incense chains",
+  "a seer’s veil and nothing underneath",
+
+  // Tecnologico / mistico
+  "a biometric exosuit",
+  "nano-fabric adaptive lingerie",
+  "a runic bodystocking",
+  "armored lingerie",
+  "a translucent resin armor",
+  "demon-silk robes",
+  "a starlight fiber dress",
+  "a void priesthood mantle",
+  "a symbiotic costume",
+    "a chain harness with glowing runes",
+  "a micro-mesh veil and slave collar",
+  "a translucent body cloak and ceremonial anklets",
+  "nothing but strategic body tape",
+  "nothing but an inked contract across the chest",
+  "a slit-side hooded robe with nothing beneath",
+  "a skintight shibari-style catsuit",
+  "a ceremonial headdress and nipple rings",
+  "nothing but sacred paint and devotion chains",
+  "a silk cape fastened by piercings",
+  "a bodysuit made of data streams",
+  "a tattered banner wrapped as a dress",
+  "a mantle of feathers and bare skin",
+  "a metal cage corset with breathing holes",
+  "a pair of glowing suspension cuffs",
+  "nothing but branded sigils across the thighs",
+  "a disassembled uniform reinterpreted as fetish wear",
+  "a training tunic modified with restraints",
+  "a twitching, semi-living exo-shawl",
+  "an antique chastity corset and padlocked boots",
+  "a soulweave web that barely conceals",
+  "a shimmering hex-dress charged with arcane energy",
+  "a sanded leather apron with exposed hips",
+  "a cybernetic priest’s harness with ports exposed",
+  "nothing but a glowing countdown tattoo",
+  "a robe of tongues sewn together",
+  "a skirt made of chained IDs and name tags",
+  "a veil of used documents stitched as fabric",
+  "a translucent punishment shift with sigils",
+  "nothing but a trial number etched in glitter across the back",
+  "a fragmented mirror harness showing others’ faces",
+  "a ceremonial spine implant worn openly",
+  "a reactive bodysuit that tightens with emotion",
+  "a chainmail of hollow beads that tinkle when touched",
+  "an armored breastplate worn with no lower garment",
+  "a one-sleeve dress pinned with obedience medals",
+  "a synthetic spiderweb robe trailing behind",
+  "a translucent custody bag adapted as dress",
+  "nothing but a barcoded collar and silence",
+  "a stitched shroud of devotion",
+"a ceremonial skirt made of petals and ash",
+"a transparent relic veil tied at the throat",
+"a garment painted on with holy ink",
+"a circle of prayer scrolls pinned as a robe",
+"a ritual apron embroidered with offerings",
+"a crystal harness humming softly",
+"a halo-collar and foot bindings only",
+"a tunic of votive ribbons collected from others",
+"a mantle of feathers inscribed with oaths",
+"a phase-shifting garment coded to emotion",
+"a skin-hugging neural net interface",
+"a biotech membrane dress reacting to sound",
+"a sensor-laced bodystocking mapping arousal",
+"an echo-suit broadcasting body data",
+"a digitized texture projected onto bare skin",
+"a climate-controlled visibility cloak",
+"a plasmic aura suit with semi-autonomy",
+"a nanocloth shroud anchored by AI pins",
+"a vacuum-compression harness suspended in air",
+"a dancer's harness studded with bells",
+"a stage corset sewn from audience requests",
+"a sheer performance veil with nothing beneath",
+"a censor-strip dress pulsing with sound",
+"a holographic leotard that glitches on motion",
+"a dress made of ticket stubs and applause",
+"a screen-body mesh projecting expressions",
+"a crown of applause clips and spotlight stripes",
+"a mono-strap thong bodysuit that vibrates visibly",
+"a prop-drape marked with scene cues"
   ],
+
   tech: ["historical", "present-day", "historical", "present-day", "historical", "present-day", "steampunk", "solarpunk","future", "magic-based", "hybrid (tech & magic)"],
   characters: [
     "alone", "couple", "alone", "couple","alone", "couple", "couple", "couple","three people","three people","three people", "three people", "four (3 to 1)", "two couples", "five (4 to 1)", "group of 5–10 (many to one)", "group of 10–50 (many to one)", "mass of 50–100 (many to one)", "over 100 (many to one)", "uncountably many (many to one)", "group of 5–10 (orgy)", "group of 10–50 (orgy)", "mass of 50–100 (orgy)", "over 100 (orgy)", "uncountably many (orgy)"
@@ -532,191 +694,26 @@ const categories = {
   "time suspended"
   ],
   narrativeContext: [
-  // Conflitti e zone di guerra
-  "war zone",
-  "active battlefield",
-  "occupied territory",
-  "rebel hideout",
-  "post-battle ruins",
-  "military encampment",
-  "guerrilla camp",
-  
-  // Criminalità e società oscura
+  "domestic life",
+  "workplace dynamics",
+  "ritualistic environment",
+  "spiritual devotion",
   "criminal underworld",
-  "gang hideout",
-  "black market den",
-  "illegal fighting ring",
-  "smuggler’s dock",
-  "underground fight club",
-  "corrupt police precinct",
-
-  // Luoghi legali e formali
-  "courtroom or judiciary",
-  "police interrogation room",
-  "detention center",
-  "lawyer’s office",
-  "government building",
-  "city hall",
-
-  // Contesti familiari e domestici
-  "family home",
-  "multi-generational household",
-  "suburban neighborhood",
-  "small village house",
-  "shared apartment",
-  "secret room in the house",
-
-  // Locali per vacanze e relax
-  "vacation resort",
-  "luxury island retreat",
-  "remote mountain cabin",
-  "tropical beach hut",
-  "ski lodge",
-  "hidden hot springs",
-
-  // Eventi sociali e festivi
-  "public celebration or party",
-  "masked ball",
-  "street festival",
-  "royal banquet",
-  "underground rave",
-  "carnival parade",
-
-  // Comunità alternative e lifestyle
-  "sex-positive commune",
-  "cooperative living space",
-  "intentional community",
-  "hippie commune",
-  "artist collective",
-
-  // Professioni e ambienti di lavoro sessuali
-  "professional escorting/prostitution",
-  "high-end escort agency",
-  "massage parlor",
-  "gentlemen’s club",
-  "strip club",
-  "private client’s residence",
-
-  // Ambienti BDSM e fetish
-  "BDSM dungeon",
-  "private dungeon",
-  "underground club",
-  "fetish party",
-  "bondage studio",
-
-  // Ambienti religiosi e spirituali
-  "religious cult",
-  "mystical sect",
-  "ancient temple",
-  "monastery",
-  "ritual site",
-  "sacred grove",
-
-  // Club e società esclusive
-  "elite society club",
-  "secretive gentlemen’s club",
-  "private members’ lounge",
-  "aristocratic salon",
-
-  // Istruzione e formazione
-  "school/academy",
-  "boarding school",
-  "military academy",
-  "magical academy",
-  "training facility",
-
-  // Ambienti cyberpunk e futuristici
-  "cyberpunk district",
-  "neon-lit urban sprawl",
-  "corporate tower",
-  "virtual reality hub",
-  "digital metaverse",
-  "underground hacker den",
-
-  // Ambienti alieni e fantascientifici
-  "alien planet",
-  "extraterrestrial colony",
-  "intergalactic space station",
-  "space ship",
-  "terraforming facility",
-
-  // Post-apocalittici e distopici
-  "post-apocalyptic bunker",
-  "underground fallout shelter",
-  "ruined cityscape",
-  "wasteland camp",
-  "resistance hideout",
-
-  // Strutture mediche e scientifiche
-  "medical facility",
-  "research hospital",
-  "laboratory",
-  "cloning center",
-  "psychiatric institution",
-
-  // Carceri e ambienti di detenzione
-  "prison",
-  "maximum security penitentiary",
-  "detention camp",
-  "rehabilitation center",
-
-  // Militari e sicurezza
-  "military base",
-  "covert operations center",
-  "training ground",
-  "security checkpoint",
-
-  // Magia, occulto e fantastico
-  "magical academy",
-  "arcane university",
-  "enchanted forest",
-  "wizard’s tower",
-  "hidden portal",
-
-  // Società segrete e cospirazioni
-  "secret society",
-  "hidden cabal",
-  "underground resistance headquarters",
-  "clandestine meeting room",
-
-  // Spa e centri benessere
-  "spa retreat",
-  "luxury wellness center",
-  "hot spring resort",
-  "meditation chamber",
-
-  // Luoghi di piacere e intrattenimento
-  "temple of pleasure",
-  "ancient ritual site",
-  "pleasure palace",
-  "erotic theater",
-
-  // Luoghi misteriosi e inquietanti
-  "haunted location",
-  "abandoned asylum",
-  "underground tunnels",
-  "forgotten crypt",
-  "cursed village",
-
-  // Ambientazioni urbane e insolite
-  "floating city",
-  "subterranean metro",
-  "skybridge walkway",
-  "rooftop garden",
-  "hidden alleyway",
-
-  // Contesti sociali e culturali
-  "post-human enclave",
-  "android commune",
-  "clan stronghold",
-  "nomadic tribe camp",
-  "urban squat",
-
-  // Fantastico / mitologico
-  "fae glen",
-  "dragon’s lair",
-  "celestial palace",
-  "underwater city"
+  "warzone or conflict",
+  "judicial or legal framework",
+  "transactional exchange",
+  "performance-based setting",
+  "artistic expression",
+  "educational environment",
+  "initiation or trial context",
+  "healing or medical care",
+  "exploration or discovery",
+  "dreamlike immersion",
+  "religious or mythic ceremony",
+  "political or diplomatic encounter",
+  "punitive or corrective structure",
+  "training or conditioning protocol",
+  "celebration or communal gathering"
   ],
   goal: [
   // Espressioni emotive e affettive
@@ -1822,8 +1819,8 @@ document.addEventListener("DOMContentLoaded", () => {
       <table class="table table-dark table-striped table-bordered rounded">
         <thead>
           <tr>
-            <th>Categoria</th>
-            <th>Valore</th>
+            <th>Category</th>
+            <th>Value</th>
           </tr>
         </thead>
         <tbody>
@@ -1876,8 +1873,53 @@ document.addEventListener("DOMContentLoaded", () => {
         </tbody>
       </table>
     `;
+    // Sezione narrativa
+    let narrative = "<h5 class='mt-4'>Narrative Description:</h5>";
 
-    document.getElementById("fantasyOutput").innerHTML = result;
+    narrative += `The narrator (${getUniqueRandoms(categories.narrator, 1)[0]}) `
+    narrative += `is a ${getUniqueRandoms(categories.orientationNarrator, 1)[0]} `
+    narrative += `${getUniqueRandoms(categories.genderNarrator, 1)[0]} `
+    narrative += `wearing ${getUniqueRandoms(categories.clothingNarrator, 1)[0]}.</p>`
+    narrative += `<p>The characters are ${getSpeciesByProbability()}, `
+    narrative += `${getUniqueRandoms(categories.relationship, 1)[0]}, `
+    narrative += `and ${getUniqueRandoms(categories.characters, 1)[0]}. `
+    narrative += `They are ${getUniqueRandoms(categories.orientationOthers, 1)[0]} `
+    narrative += ` ${getUniqueRandoms(categories.genderDistribution, 1)[0]} `
+    narrative += `wearing ${getUniqueRandoms(categories.clothingOthers, 1)[0]}.</p>`
+    narrative += `<p>The scene is ${getUniqueRandoms(categories.realism, 1)[0]} `
+    narrative += `with ${getUniqueRandoms(categories.tech, 1)[0]} tech, `
+    narrative += `set in ${getUniqueRandoms(categories.place, 1)[0]}, `
+    narrative += `with ${getUniqueRandoms(categories.seasonClimate, 1)[0]} `
+    narrative += `and ${getUniqueRandoms(categories.weather, 1)[0]}, `
+    narrative += `starting at ${getUniqueRandoms(categories.time, 1)[0]} `
+    narrative += `and lasting ${getUniqueRandoms(categories.duration, 1)[0]}.</p>`
+    narrative += `<p>The context is ${getUniqueRandoms(categories.narrativeContext, 1)[0]} `
+    narrative += `with "${getUniqueRandoms(categories.exposure, 1)[0]}" exposure `
+    narrative += `and "${getUniqueRandoms(categories.goal, 1)[0]}" as a goal. `
+    narrative += `The dynamic is ${getUniqueRandoms(categories.dynamic, 1)[0]}, `
+    narrative += `with "${getUniqueRandoms(categories.powerImbalance, 1)[0]}" power imbalance, `
+    narrative += `"${getUniqueRandoms(categories.consent, 1)[0]}" consent and `
+    narrative += `${getUniqueRandoms(categories.age, 1)[0]}.</p>`
+    narrative += `<p>Involved objects are:<ol>`
+    const randomIdxTextObj = Math.floor(Math.random() * 6) + 2;
+    const objectsText = getUniqueRandoms(objectPool, randomIdxTextObj);
+    objects.forEach((obj, idx) => {  
+      narrative +=`<li>${obj}</li>`;
+    });
+    narrative += `</ol></p>`
+    narrative += `<p>Involved kinks, practices or positions are:<ol>`
+    const randomIdxText = Math.floor(Math.random() * 6) + 2;
+    const kinksText = getUniqueRandoms(kinkPool, randomIdxText);
+    kinks.forEach((kink, idx) => {
+      narrative += `<li>${kink}</li>`;
+    });
+    narrative += `</ol></p>`
+    narrative += `<p>Have fun, degenerate.</p>`
+    narrative += "<br/>";
+
+
+    document.getElementById("fantasyOutput").innerHTML = narrative + result;
+
   });
 });
 
